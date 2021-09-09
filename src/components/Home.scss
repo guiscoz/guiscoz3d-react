@@ -1,0 +1,203 @@
+@import '../variables.scss';
+
+/* -- FONT SETTINGS -- */
+
+.container_two_object{
+  /*default mobile settings*/
+    background-color: $color-lighter;
+
+    h1 {
+      color: $color-darker;
+      font-size: 2rem;
+    }
+
+    p {
+      color: $color-dark;
+      font-size: 1rem;
+    }
+
+    /*mobile landscape settings*/
+    @media screen and (max-height: $small) and (orientation: landscape) {
+      h1 {
+        font-size: .9rem;
+      }
+
+      p {
+        font-size: .65rem;
+      }
+    }
+
+    @media screen and (min-height: $small) and (orientation: landscape) {
+      h1 {
+        font-size: 1.25rem;
+      }
+
+      p {
+        font-size: .8rem;
+      }
+    }
+
+    /*mobile portait settings*/
+    @media (max-width: $smaller) and (orientation:portrait) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: .75rem;
+      }
+    }
+
+    @media (max-width: $small) and (orientation:portrait) {
+      h1 {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: .75rem;
+      }
+    }
+
+    @media screen and (min-width: $ipadpro) and (orientation:portrait) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+    /*computer settings*/
+    @media screen and (min-width: $laptop) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media screen and (min-width: $laptop-lg) {
+      h1 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+}
+
+
+/* -- CONTAINER SETTINGS -- */
+
+.box_all {
+  /*default mobile settings*/
+  padding-top: 2rem;
+  display: flex;
+  margin: 0 2rem;
+  height: 84vh;
+  
+  .box_img {
+    display: none;
+  }
+
+  /*mobile landscape settings*/
+  @media (max-height: $small) and (orientation:landscape) {
+    margin: 0 1rem;
+    height: auto;
+  }
+
+  @media (min-height: $small) and (orientation:landscape) {
+    margin: 0 2rem;
+    height: 92vh;
+  }
+
+  @media (min-height: $surface-duo) and (orientation:landscape) {
+    padding-top: 0rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: 0 2rem;
+    height: 82vh;
+    .box_img {
+      display: block;
+      height: 60vh;
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  @media (min-height: $tablet) and (orientation:landscape) {
+    margin: 0 3rem;
+    height: 84vh;
+
+  }
+
+  @media (min-height: $ipadpro) and (orientation:landscape) {
+    height: 55vh;
+  }
+
+  /*mobile portait settings*/
+
+  @media (max-width: $small) and (orientation:portrait) {
+    margin: 0 1rem;
+    height: 81vh;
+  }
+
+  @media screen and (min-width: $tablet) and (orientation:portrait) {
+    padding-top: 0rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: 0 3rem;
+    height: 88vh;
+    .box_img {
+      display: block;
+      height: 60vh;
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  @media screen and (min-width: $ipadpro) and (orientation:portrait) {
+    margin: 0 6rem;
+    height: 90.5vh;
+    .box_img {
+      display: block;
+      height: 70vh;
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  /*computer settings*/
+  @media screen and (min-width: $laptop) {
+    margin: 0 8rem;
+    height: 87vh;
+    .box_img {
+      display: block;
+      height: 80vh;
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  @media screen and (min-width: $laptop-lg) {
+    padding: 2rem 2rem;
+    height: 82vh;
+
+    .box_img {
+      height: 80vh;
+      img {
+        height: 95%;
+      }
+    }
+  }
+}

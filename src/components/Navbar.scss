@@ -1,0 +1,81 @@
+@import '../variables.scss';
+
+.navbar {
+    background-color: $color-darker;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: row;
+
+    img {
+        padding:5px;
+        width: 150px;
+        height: auto;
+
+        @media (max-width: $smaller) {
+            width: 100px;
+            padding:0px;
+        }
+
+        @media screen and (max-height: 375px) {
+            width: 95px;
+            padding:0px;
+        }
+    }
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-link {
+    margin-top: 1rem;
+    text-decoration: none;
+    font-weight: 200;
+    display: none;
+    color: $color-light !important;
+
+
+    @media screen and (min-width: $tablet) {
+        display: block;
+        margin-left: 5rem;
+    }
+
+    @media screen and (min-width: $laptop) {
+        margin-left: 12rem;
+    }
+
+    @media screen and (max-height: 375px) {
+        margin-top: 0rem;
+    }
+} 
+
+.nav-link:hover {
+    color: $color-dark !important;
+}
+
+#basic-nav-dropdown {
+    display: block;
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    };
+
+    
+}
+
+.btn-outline-light {
+    color: $color-light;
+    background-color: $color-darker;
+    border-color: $color-grey;
+}
+
+.dropdown-menu {
+    background-color: $color-dark;
+    
+    a {
+        text-decoration: none;
+        color: $color-lighter;
+    }
+}

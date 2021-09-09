@@ -1,0 +1,24 @@
+@import '../variables.scss';
+
+.footer {
+   
+    background-color: $color-darker;
+    color: $color-light;
+    padding-top: 1rem;
+    display: flex;
+    padding-left: 1.25rem;
+
+    p {
+        font-size: .8rem;
+        padding-left: 2rem;
+    }
+    
+    svg {
+        font-size: 1.5rem;
+        color: $color-light;
+    }
+
+    svg:hover {
+        color: $color-grey;
+    }
+};

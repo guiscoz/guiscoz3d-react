@@ -1,0 +1,104 @@
+@import '../variables.scss';
+
+.container_videos {
+    background-color: $color-lighter;
+}
+
+#row_rigging {
+    /*smaller mobile resolution*/
+    height: 85vh;
+    padding: 2rem .5rem;
+
+    h3 {
+        color: $color-darker;
+        font-size: 1.5rem;
+    }
+
+    p {
+        color: $color-dark;
+        font-size: .75rem;
+    }
+
+    /*mobile landscape settings*/
+    @media (max-height: $smaller) and (orientation: landscape) {
+        height: auto;
+        padding: 1rem 0rem;
+    }
+
+    @media (min-height: $smaller) and (orientation: landscape) {
+        height: 190vh;
+        padding: 1rem 0rem;
+    }
+
+    @media (min-height: $small) and (orientation: landscape) {
+        height: 135vh;
+        padding: 1rem 0rem;
+    }
+
+    @media (min-height: $tablet) and (orientation: landscape) {
+        height: 85vh;
+        padding: 1rem 0rem;
+    }
+
+    /*mobile portrait settings*/
+    @media (min-width: $small) and (orientation:portrait) {
+        padding: 2rem .5rem;
+        height: 84vh;
+    }
+
+    @media (min-width: $tablet) and (orientation:portrait) {
+        padding: 11rem 2rem;
+        height: 87.2vh; 
+        
+        h3 {
+            font-size: 4rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    @media (min-width: $ipadpro) and (orientation:portrait) {
+        padding: 18rem 2rem;
+        height: 90.75vh;
+    }
+
+    /*computer settings*/
+    @media (min-width: $laptop) {
+        padding: 2rem 2rem;
+        height: 87vh;
+
+        h3 {
+            font-size: 4rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    @media (min-width: $laptop-lg) {
+        padding: 2rem 2rem;
+        height: 82vh;
+    }
+
+    iframe{
+        margin: -3rem 0;
+        padding-right: 0;
+
+        @media screen and (min-width: $tablet) {
+            margin: 0rem 0;
+        }
+
+        @media screen and (min-width: $laptop) {
+            margin: 0rem 0;
+            padding-right: 26rem;
+        }
+
+        @media screen and (min-width: $laptop-lg) {
+            margin: 0rem 0;
+            padding-right: 38rem;
+        }
+    }
+}
