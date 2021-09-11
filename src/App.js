@@ -5,7 +5,6 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-//para colocar no Github: https://cli.github.com/     video 2 da aula 14
 
 import "./App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
